@@ -1,0 +1,164 @@
+/* PORTFOLIO CSS */
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  font-weight: 300;
+  background-color: #1A1A1A;
+  color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 48px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  border-bottom: 1px solid #F5F5F5;
+  z-index: 1000;
+
+}
+
+.header h1 {
+  font-size: 32px;
+  color: #F5F5F5;
+  font-family: "Archivo";
+}
+
+.inicio {
+  color: #1a99d4;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.inicio:hover {
+  color: #ffffff;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  padding: 128px 0;
+  background-color: #1A1A1A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.serif-big {
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 1.06;
+  letter-spacing: -0.5px;
+  color: #F5F5F5;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.portfolio-item {
+  width: 23%;
+  height: 420px;
+  background-color: #060606;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.portfolio-item img {
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-title {
+  height: 20%;
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: 400;
+  color: #F5F5F5;
+  padding: 8px 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  text-align: center;
+  overflow: hidden;
+}
+
+.portfolio-item::after {
+  content: "";
+  display: block;
+  height: 10%;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .portfolio-item {
+    width: 47%;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-item {
+    width: 100%;
+  }
+
+  .serif-big {
+    font-size: 48px;
+  }
+}
